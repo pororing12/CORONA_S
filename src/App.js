@@ -1,32 +1,25 @@
 import React, {useState, useEffect} from 'react';
 import axios from 'axios'
 import News from './news'
-import User from './User';
-import Main from './main'
+// import User from './User';
+
 function App() {
   const [coronas, setCorona] = useState([]);
   useEffect(() => {
     fetchApi();
   }, [])
 
-  const BASE_URL = 'https://api.coronas.info/reports/'
+  const BASE_URL = 'https://api.coronas.info/news/'
 
   const fetchApi = async () => {
     const response = await axios.get(BASE_URL)
-    console.log(response.data);
-    setCorona(response.data);
+    console.log(response.data.news);
+    setCorona(response.data.news);
     
   }
   return (
     <div>
       {coronas.map((corona, index) => (
-        <Main 
-        key = {index}
-        total_count = {corona.total_count}
-        
-        />
-      ))}
-      {/* {coronas.map((corona, index) => (
         <News 
           key = {index}
           title = {corona.title}
@@ -35,7 +28,7 @@ function App() {
           description = {corona.description}
           pubDate = {corona.pubDate}
           />
-      ))} */}
+      ))}
       {/* {coronas.map((corona) => (
         <User
           key = {corona.id}
