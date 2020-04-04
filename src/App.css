@@ -7,3 +7,9 @@
   display: grid;
   grid-template-rows: 100px 200px;
 }
+
+.news-font {
+  color: black;
+  font-weight: 800;
+  font-size: x-large;
+}

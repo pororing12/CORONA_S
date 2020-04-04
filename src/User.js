@@ -12,4 +12,5 @@ function User({id, name, total, increase}) {
         </div>
     )
 }
+
 export default User;

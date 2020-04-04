@@ -7,11 +7,11 @@ function News({ title, originalLink, link, description, pubDate}) {
     let descriptions = description.replace(/<b>/gi,'"')
     return (
     <div>
-    <h1>제목: {titles}</h1>
-    <h3>{originalLink}</h3>
-    <h3>{link}</h3>
-    <h3>{descriptions}</h3>
-    <h3>{date}</h3>
+    <h5>제목: {titles}</h5>
+    <h5>{originalLink}</h5>
+    <h5>{link}</h5>
+    <h5>{descriptions}</h5>
+    <h5>{date}</h5>
     </div>
     )
     
