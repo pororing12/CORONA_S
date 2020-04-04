@@ -3,9 +3,9 @@ import React from 'react';
 import '../App.css'
 
 function NewsList({ title, link, description, pubDate}) {
-    let titles = title.replace(/<b>/gi,'"')
-    let date = pubDate.replace(/Sat/gi,'토요일')
-    let descriptions = description.replace(/<b>/gi,'"')
+    const titles = title.replace(/<b>/gi,'"')
+    const date = pubDate.replace(/Sat/gi,'토요일')
+    const descriptions = description.replace(/<b>/gi,'"')
     return (
     <div>
     <a href = {link} className = "news-font" >제목: {titles}</a>
